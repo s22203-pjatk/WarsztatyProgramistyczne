@@ -1,6 +1,11 @@
 import random
 
-#1
+# #1
+# # Z. Tuple (1)
+#
+# Stwórz krotkę zawierającą trzy imiona męskie (np. Zbyszek, Stefan, Franek) i trzy
+# imiona żeńskie (np. Asia, Basia, Kasia):
+
 names = (
     "Franek",
     "Marek",
@@ -13,7 +18,11 @@ print("\n")
 print(names)
 print("\n")
 
-#2
+# #2
+# # Z. Zbiór (2)
+#
+# Stwórz krotkę zawierającą trzy nazwiska: Studencki, Banach, Kowalski:
+
 surnames = (
     "Banach",
     "Kowalski",
@@ -25,13 +34,22 @@ surnames = (
 print(surnames)
 print("\n")
 
-#3
+# #3
+# # Z. Pętla imion żeńskich
+#
+# Stwórz pętlę drukującą jedynie imiona żeńskie:
+
 for kobitka in names:
     if kobitka[-1]=="a":
         print(kobitka)
 print("\n")
 
-#4
+# #4
+# # Z. Funkcja
+#
+# Napisz funkcję sprawdzającą czy nazwisko wygląda jak polskie (czyli czy kończy
+# się na -ski, -cki):
+
 def zdacydowaniePolaczek(s):
     koncowki = ('ski', 'cki')
     for each in koncowki:
@@ -39,7 +57,12 @@ def zdacydowaniePolaczek(s):
             return True
     return False
 
-#5
+# #5
+# # Z. Pętla nazwisk "polskich"
+#
+# Stwórz pętlę drukującą nazwiska wyglądające jak polskie (czyli nazwiska kończące
+# się na -ski, -cki):
+
 for each in surnames:
     if zdacydowaniePolaczek(each):
         print(each)
@@ -55,7 +78,13 @@ def filtracjaPolaczkow(zn):
 print(filtracjaPolaczkow(surnames))
 print("\n")
 
-#6
+# #6
+# # Z. Imiona i nazwiska
+#
+# Stwórz pętlę tworzącą pary (imię, nazwisko) używając zbiorów imion i nazwisk
+# zdefiniowanych wcześniej i dodaj je na listę. Następnie wydrukuj każdy element
+# tej listy:
+
 people = [] #nowa lista
 
 for n in names:
@@ -66,7 +95,12 @@ for each in people:
     print(each)
 print("\n")
 
-#7
+# #7
+# # Z. Żeńskie imiona i nazwiska
+#
+# Pamiętaj, że polskie nazwiska kobiet kończą się na "a". Popraw pętlę z
+# poprzedniego zadania tak żeby zachowywała ten warunek:
+
 for n in names:
     for s in surnames:
         if n[-1] == 'a' and zdacydowaniePolaczek(s):
@@ -75,7 +109,12 @@ for n in names:
         print(n,s)
 print("\n")
 
-#8
+# #8
+# # Z. Losowanie imion i nazwisk
+#
+# Napisz funkcję, która na podstawie stworzonych wcześniej zbiorów imion i nazwisk
+# stworzy nazwę człowieka. Pamiętaj o odmianie nazwisk żeńskich!
+
 def stworzOsobe(names,surnames):
     x = random.randint(0,len(names)-1)
     losoweImie = names[x]
