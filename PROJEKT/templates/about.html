@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    &nbsp;
+        <center><h1>{% block title %}About 💻{% endblock %}</h1></center>
+    <hr>
+        <center><p>A news page for a school project.</p></center>
+        <center><p>Made by Tomasz Fidurski, s22203.</p></center>
+    <hr>
+        <center><a href="{{ url_for('home')}}" class="badge badge-warning">Go Back</a></center>
+{% endblock %}

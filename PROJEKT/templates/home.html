@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}⚡ SNNS ⚡{% endblock %}
+
+{% block content %}
+    &nbsp;
+    <h1>Check out the news 📣</h1>
+        {% for post in posts %}
+            <hr>
+                <a href="{{ url_for('post', post_id=post['id']) }}">
+                    <h2>➡&nbsp;{{ post['title'] }}</h2>
+            </a>
+                <span class="badge badge-primary">{{ post['created'] }}</span>
+        {% endfor %}
+    <hr>
+{% endblock %}

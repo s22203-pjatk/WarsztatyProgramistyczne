@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}⚡ SNNS ⚡{% endblock %}
+
+{% block content %}
+    &nbsp;
+        <h1>{{ post['title'] }}</h1>
+    <hr>
+        <span class="badge badge-pill badge-warning">{{ post['created'] }}</span>
+            <p>&emsp;{{ post['content'] }}</p>
+    <hr>
+        <center><a href="{{ url_for('home')}}" class="badge badge-warning">Go Back</a></center>
+        &nbsp;
+{% endblock %}
